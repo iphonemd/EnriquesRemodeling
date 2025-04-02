@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrique's Remodeling - Premium Renovation Services</title>
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Enrique's <span>Remodeling</span></h1>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="contact-btn">Get a Quote</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2 class="fade-in">Premium Remodeling for Discerning Clients</h2>
+            <p class="fade-in">Transform your space with unparalleled craftsmanship and innovative design. Experience the luxury of personalized renovation services tailored to your unique vision.</p>
+            <div class="hero-btns fade-in">
+                <a href="#services" class="btn-primary">Explore Services</a>
+                <a href="#contact" class="btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header fade-in">
+            <h3>Our Premium Services</h3>
+            <p>We specialize in high-end custom renovation solutions for discerning clients who demand excellence.</p>
+        </div>
+        <div class="services-grid">
+            <!-- Bathroom Remodeling -->
+            <div class="service-card fade-in" data-service="bathroom">
+                <div class="service-img">
+                    <div class="service-slideshow">
+                        <img src="/api/placeholder/600/400" alt="Bathroom Remodel 1">
+                        <img src="/api/placeholder/600/400" alt="Bathroom Remodel 2">
+                        <img src="/api/placeholder/600/400" alt="Bathroom Remodel 3">
+                    </div>
+                    <div class="service-nav">
+                        <div class="service-nav-dot active" data-index="0"></div>
+                        <div class="service-nav-dot" data-index="1"></div>
+                        <div class="service-nav-dot" data-index="2"></div>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Bathroom Remodeling</h3>
+                    <p class="service-desc">Transform your bathroom into a luxurious spa-like retreat with premium fixtures and innovative design solutions.</p>
+                    <a href="#" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+            </div>
+            
+            <!-- Kitchen Remodeling -->
+            <div class="service-card fade-in" data-service="kitchen">
+                <div class="service-img">
+                    <div class="service-slideshow">
+                        <img src="/api/placeholder/600/400" alt="Kitchen Remodel 1">
+                        <img src="/api/placeholder/600/400" alt="Kitchen Remodel 2">
+                        <img src="/api/placeholder/600/400" alt="Kitchen Remodel 3">
+                    </div>
+                    <div class="service-nav">
+                        <div class="service-nav-dot active" data-index="0"></div>
+                        <div class="service-nav-dot" data-index="1"></div>
+                        <div class="service-nav-dot" data-index="2"></div>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Kitchen Remodeling</h3>
+                    <p class="service-desc">Elevate your culinary experience with custom cabinetry, premium countertops, and state-of-the-art appliances.</p>
+                    <a href="#" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+            </div>
+            
+            <!-- Floor Remodeling -->
+            <div class="service-card fade-in" data-service="flooring">
+                <div class="service-img">
+                    <div class="service-slideshow">
+                        <img src="/api/placeholder/600/400" alt="Floor Remodel 1">
+                        <img src="/api/placeholder/600/400" alt="Floor Remodel 2">
+                        <img src="/api/placeholder/600/400" alt="Floor Remodel 3">
+                    </div>
+                    <div class="service-nav">
+                        <div class="service-nav-dot active" data-index="0"></div>
+                        <div class="service-nav-dot" data-index="1"></div>
+                        <div class="service-nav-dot" data-index="2"></div>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Floor Remodeling</h3>
+                    <p class="service-desc">Enhance your space with premium hardwood, natural stone, or luxury vinyl flooring installed with expert precision.</p>
+                    <a href="#" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+            </div>
+            
+            <!-- Painting -->
+            <div class="service-card fade-in" data-service="painting">
+                <div class="service-img">
+                    <div class="service-slideshow">
+                        <img src="/api/placeholder/600/400" alt="Painting 1">
+                        <img src="/api/placeholder/600/400" alt="Painting 2">
+                        <img src="/api/placeholder/600/400" alt="Painting 3">
+                    </div>
+                    <div class="service-nav">
+                        <div class="service-nav-dot active" data-index="0"></div>
+                        <div class="service-nav-dot" data-index="1"></div>
+                        <div class="service-nav-dot" data-index="2"></div>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Interior & Exterior Painting</h3>
+                    <p class="service-desc">Transform your space with premium paints and expert techniques for a flawless finish that stands the test of time.</p>
+                    <a href="#" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+            </div>
+            
+            <!-- Fence -->
+            <div class="service-card fade-in" data-service="fence">
+                <div class="service-img">
+                    <div class="service-slideshow">
+                        <img src="/api/placeholder/600/400" alt="Fence 1">
+                        <img src="/api/placeholder/600/400" alt="Fence 2">
+                        <img src="/api/placeholder/600/400" alt="Fence 3">
+                    </div>
+                    <div class="service-nav">
+                        <div class="service-nav-dot active" data-index="0"></div>
+                        <div class="service-nav-dot" data-index="1"></div>
+                        <div class="service-nav-dot" data-index="2"></div>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Fence Installation & Repair</h3>
+                    <p class="service-desc">Enhance your property's security and aesthetic appeal with custom fencing solutions built to last.</p>
+                    <a href="#" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+            </div>
+            
+            <!-- Trim & Moulding -->
+            <div class="service-card fade-in" data-service="trim">
+                <div class="service-img">
+                    <div class="service-slideshow">
+                        <img src="/api/placeholder/600/400" alt="Trim 1">
+                        <img src="/api/placeholder/600/400" alt="Trim 2">
+                        <img src="/api/placeholder/600/400" alt="Trim 3">
+                    </div>
+                    <div class="service-nav">
+                        <div class="service-nav-dot active" data-index="0"></div>
+                        <div class="service-nav-dot" data-index="1"></div>
+                        <div class="service-nav-dot" data-index="2"></div>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">Trim & Moulding Installation</h3>
+                    <p class="service-desc">Add architectural interest and elegance to your space with custom trim and moulding details.</p>
+                    <a href="#" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-content fade-in">
+                <h3>Elevating Spaces with Exceptional Craftsmanship</h3>
+                <p>At Enrique's Remodeling, we believe that every space has the potential to be extraordinary. Founded on principles of excellence, integrity, and innovation, we've been transforming homes and commercial properties for over 15 years.</p>
+                <p>Our team of master craftsmen and designers bring decades of combined experience to every project, ensuring flawless execution and stunning results. We use only premium materials and cutting-edge techniques to create spaces that stand the test of time.</p>
+                <p>What sets us apart is our commitment to personalized service. From initial concept to final walkthrough, we work closely with each client to understand their unique vision and bring it to life with precision and artistry.</p>
+                <div class="about-stats fade-in">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Years of Excellence</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="about-image fade-in">
+                <img src="/api/placeholder/800/600" alt="Enrique's Remodeling Team">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="section-header fade-in">
+            <h3>Our Portfolio</h3>
+            <p>Explore our collection of premium projects and exceptional transformations.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in">
+                <img src="/api/placeholder/600/600" alt="Project 1">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">Modern Bathroom Renovation</div>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="/api/placeholder/600/600" alt="Project 2">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">Luxury Kitchen Remodel</div>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="/api/placeholder/600/600" alt="Project 3">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">Custom Hardwood Flooring</div>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="/api/placeholder/600/600" alt="Project 4">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">Elegant Master Bathroom</div>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="/api/placeholder/600/600" alt="Project 5">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">Contemporary Fence Design</div>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="/api/placeholder/600/600" alt="Project 6">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">Premium Interior Painting</div>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="/api/placeholder/600/600" alt="Project 7">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">Custom Trim & Moulding</div>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="/api/placeholder/600/600" alt="Project 8">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">Outdoor Patio Transformation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-container">
+            <div class="section-header fade-in">
+                <h3>Client Reviews</h3>
+                <p>See what our satisfied clients have to say about their experience with Enrique's Remodeling.</p>
+            </div>
+            <div class="testimonial-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="/api/placeholder/100/100" alt="James Wilson">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>James Wilson</h4>
+                            <p>Tulsa, OK</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <div class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                        <div class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                        <div class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                        <div class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                        <div class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                    </div>
+                    <p class="testimonial-text">"Enrique's team transformed our outdated kitchen into a modern masterpiece. Their attention to detail and commitment to quality exceeded our expectations. The project was completed on time and within budget."</p>
+                    <p class="testimonial-date">January 15, 2025</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="/api/placeholder/100/100" alt="Sophia Martinez">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Sophia Martinez</h4>
+                            <p>Broken Arrow, OK</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <div class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                        <div class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                        <div class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                        <div class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                        <div class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                    </div>
+                    <p class="testimonial-text">"We hired Enrique's Remodeling for our master bathroom renovation and couldn't be happier with the results. The design is stunning, and the craftsmanship is impeccable. Worth every penny!"</p>
+                    <p class="testimonial-date">February 28, 2025</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="/api/placeholder/100/100" alt="Michael Johnson">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Michael Johnson</h4>
+                            <p>Bixby, Ok</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <div class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                        <div class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                        <div class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                        <div class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                        <div class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                    </div>
+                    <p class="testimonial-text">"From start to finish, working with Enrique's team was a pleasure. They completely transformed our home with new flooring and interior paint. Their professionalism and attention to detail are unmatched."</p>
+                    <p class="testimonial-date">March 10, 2025</p>
+                </div>
+            </div>
+            
+            <!-- Review Form -->
+            <div class="review-form-container fade-in">
+                <h3 class="form-title">Share Your Experience</h3>
+                <form id="review-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" class="form-control" placeholder="City, State" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Rating</label>
+                        <div class="rating-select">
+                            <div class="rating-option" data-rating="1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <div class="rating-option" data-rating="2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <div class="rating-option" data-rating="3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <div class="rating-option" data-rating="4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <div class="rating-option" data-rating="5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                        </div>
+                        <input type="hidden" id="rating" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review">Your Review</label>
+                        <textarea id="review" class="form-control" rows="5" placeholder="Share your experience with our services..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info fade-in">
+                <h3>Get In Touch</h3>
+                <p>Ready to transform your space? Contact us today to schedule a consultation with one of our expert designers. We'll bring your vision to life with our premium remodeling services.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p>(918) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>info@enriquesremodeling.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Address</h4>
+                            <p>123 71st St, Tulsa, OK 74100</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Saturday: 8am - 6pm<br>Sunday: By appointment</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Pinterest">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h8"></path><path d="M12 8v8"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-form fade-in">
+                <h3>Request a Consultation</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Full Name</label>
+                        <input type="text" id="contact-name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-row">
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-phone">Phone</label>
+                            <input type="tel" id="contact-phone" class="form-control" placeholder="Your Phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-service">Service Interested In</label>
+                        <select id="contact-service" class="form-control" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="bathroom">Bathroom Remodeling</option>
+                            <option value="kitchen">Kitchen Remodeling</option>
+                            <option value="flooring">Floor Remodeling</option>
+                            <option value="painting">Interior & Exterior Painting</option>
+                            <option value="fence">Fence Installation/Repair</option>
+                            <option value="trim">Trim & Moulding Installation</option>
+                            <option value="other">Other Services</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" class="form-control" rows="5" placeholder="Tell us about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <div class="footer-logo">Enrique's <span>Remodeling</span></div>
+                    <p>Transforming spaces with exceptional craftsmanship and innovative design. Premium remodeling services for discerning clients.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Pinterest">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h8"></path><path d="M12 8v8"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg> Home</a></li>
+                        <li><a href="#services"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg> Services</a></li>
+                        <li><a href="#about"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg> About Us</a></li>
+                        <li><a href="#gallery"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg> Gallery</a></li>
+                        <li><a href="#testimonials"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg> Reviews</a></li>
+                        <li><a href="#contact"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" data-service="bathroom"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg> Bathroom Remodeling</a></li>
+                        <li><a href="#" data-service="kitchen"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg> Kitchen Remodeling</a></li>
+                        <li><a href="#" data-service="flooring"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg> Floor Remodeling</a></li>
+                        <li><a href="#" data-service="painting"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg> Interior & Exterior Painting</a></li>
+                        <li><a href="#" data-service="fence"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg> Fence Installation/Repair</a></li>
+                        <li><a href="#" data-service="trim"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg> Trim & Moulding Installation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            123 71st St, Tulsa, OK 74100
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            (918) 123-4567
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            info@enriquesremodeling.com
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            Mon-Sat: 8am - 6pm<br>Sunday: By appointment
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-hr">
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 Enrique's Remodeling. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </a>
+
+    <!-- Service Modal -->
+    <div class="modal" id="service-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title"></h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery" id="modal-gallery">
+                    <!-- Gallery images will be populated by JavaScript -->
+                </div>
+                <div class="modal-description">
+                    <h4>Description</h4>
+                    <p id="modal-description"></p>
+                </div>
+                <div class="modal-features">
+                    <h4>Features</h4>
+                    <div class="feature-list" id="modal-features">
+                        <!-- Features will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="modal-cta">
+                    <a href="#contact" class="btn-primary">Request a Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts/index.js"></script>
+</body>
+</html>
