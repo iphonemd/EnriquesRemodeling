@@ -1191,3 +1191,194 @@ nav ul li a:hover::after {
       justify-content: center;
   }
 }
+
+/* Form Feedback Messages */
+.form-success-message,
+.form-error-message {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.form-success-message {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4CAF50;
+  border: 1px solid #4CAF50;
+}
+
+.form-error-message {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #F44336;
+  border: 1px solid #F44336;
+}
+
+/* Form validation visual feedback */
+.form-control:invalid:focus {
+  border-color: #F44336;
+}
+
+.form-control:valid:focus {
+  border-color: #4CAF50;
+}
+
+.input-error {
+  border-color: #F44336 !important;
+  background-color: rgba(244, 67, 54, 0.05);
+}
+
+.validation-error {
+  color: #F44336;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+/* Loading state for button */
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Honeypot Field - hide from users but visible to bots */
+.website-field {
+  display: none !important;
+  opacity: 0;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* Rating Options Styling */
+.rating-option {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.rating-option:hover {
+  transform: scale(1.1);
+}
+
+.rating-option.selected svg {
+  color: #FFD700; /* Golden color for selected stars */
+}
+
+.rating-select:hover .rating-option:not(:hover):not(.selected) svg {
+  color: #ddd; /* Light gray for unselected stars on hover */
+}
+
+.footer-bottom-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #fff;
+}
+
+.footer-bottom-links a.active {
+  color: #fff;
+  position: relative;
+}
+
+.footer-bottom-links a.active:after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.privacy-checkbox {
+  margin-top: 4px;
+  margin-right: 10px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.checkbox-group label {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.checkbox-group a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.checkbox-group a:hover {
+  text-decoration: underline;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.privacy-checkbox {
+  margin-top: 4px;
+  margin-right: 10px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.checkbox-group label {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.checkbox-group a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.checkbox-group a:hover {
+  text-decoration: underline;
+}
+
+.rating-option.selected svg {
+  color: #FFD700; /* Golden color for selected stars */
+}
+
+.rating-select:hover .rating-option:not(:hover):not(.selected) svg {
+  color: #ddd; /* Light gray for unselected stars on hover */
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.privacy-checkbox {
+  margin-top: 4px;
+  margin-right: 10px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.checkbox-group label {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.checkbox-group a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.checkbox-group a:hover {
+  text-decoration: underline;
+}

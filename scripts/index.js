@@ -275,47 +275,348 @@ ratingOptions.forEach(option => {
   });
 });
 
-// Review Form Submission
-reviewForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  
-  const name = document.getElementById('name').value;
-  const location = document.getElementById('location').value;
-  const rating = document.getElementById('rating').value;
-  const review = document.getElementById('review').value;
-  
-  if (rating === '0') {
-      alert('Please select a rating');
-      return;
-  }
-  
-  // In a real implementation, this would send data to a server
-  console.log({name, location, rating, review});
-  
-  // Success message
-  alert('Thank you for your review! It will be visible after moderation.');
-  reviewForm.reset();
-  ratingOptions.forEach(opt => opt.classList.remove('selected'));
-  ratingInput.value = '0';
-});
+// Review and contact Form Submission
 
-// Contact Form Submission
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  
-  const name = document.getElementById('contact-name').value;
-  const email = document.getElementById('contact-email').value;
-  const phone = document.getElementById('contact-phone').value;
-  const service = document.getElementById('contact-service').value;
-  const message = document.getElementById('contact-message').value;
-  
-  // In a real implementation, this would send data to a server
-  console.log({name, email, phone, service, message});
-  
-  // Success message
-  alert('Thank you for contacting us! We will get back to you shortly.');
-  contactForm.reset();
-});
+document.addEventListener('DOMContentLoaded', function() {
+    // Form validation functions
+    function validatePhone(phone) {
+      // Basic US phone validation (accepts formats like: (123) 456-7890, 123-456-7890, 1234567890)
+      const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}$/;
+      return phoneRegex.test(phone);
+    }
+    
+    function validateEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+    
+    function validateForm(form) {
+      let isValid = true;
+      
+      // Get form elements
+      const nameInput = form.querySelector('[id$="-name"]'); // matches both contact-name and name
+      const emailInput = form.querySelector('[id$="-email"]') || form.querySelector('[id="email"]');
+      const phoneInput = form.querySelector('[id$="-phone"]') || form.querySelector('[id="phone"]');
+      
+      // Clear previous error messages
+      form.querySelectorAll('.validation-error').forEach(el => el.remove());
+      
+      // Validate name (required)
+      if (nameInput && !nameInput.value.trim()) {
+        addErrorMessage(nameInput, 'Please enter your name');
+        isValid = false;
+      }
+      
+      // Validate email (required and format)
+      if (emailInput) {
+        if (!emailInput.value.trim()) {
+          addErrorMessage(emailInput, 'Please enter your email address');
+          isValid = false;
+        } else if (!validateEmail(emailInput.value.trim())) {
+          addErrorMessage(emailInput, 'Please enter a valid email address');
+          isValid = false;
+        }
+      }
+      
+      // Validate phone (if provided, check format)
+      if (phoneInput && phoneInput.value.trim() && !validatePhone(phoneInput.value.trim())) {
+        addErrorMessage(phoneInput, 'Please enter a valid phone number');
+        isValid = false;
+      }
+      
+      // Validate message or review (if present)
+      const messageInput = form.querySelector('#contact-message') || form.querySelector('#review');
+      if (messageInput && !messageInput.value.trim()) {
+        addErrorMessage(messageInput, 'Please enter your message');
+        isValid = false;
+      }
+      
+      // Validate rating if it's the review form
+      const ratingInput = form.querySelector('#rating');
+      if (ratingInput && ratingInput.value === '0') {
+        const ratingContainer = form.querySelector('.rating-select');
+        addErrorMessage(ratingContainer, 'Please select a rating');
+        isValid = false;
+      }
+      
+      return isValid;
+    }
+    
+    function addErrorMessage(element, message) {
+      // Create an error message element
+      const errorElement = document.createElement('div');
+      errorElement.className = 'validation-error';
+      errorElement.textContent = message;
+      
+      // Insert it after the form element
+      element.parentNode.insertBefore(errorElement, element.nextSibling);
+      
+      // Add error class to the element
+      element.classList.add('input-error');
+      
+      // Remove error state on input
+      element.addEventListener('input', function() {
+        element.classList.remove('input-error');
+        const error = element.parentNode.querySelector('.validation-error');
+        if (error) error.remove();
+      });
+    }
+    
+    // Handle Contact Form
+    const contactForm = document.getElementById('contact-form');
+    
+    if (contactForm) {
+      // Add honeypot field
+      const honeypotField = document.createElement('div');
+      honeypotField.className = 'form-group website-field';
+      honeypotField.innerHTML = `
+        <label for="_gotcha">Website</label>
+        <input type="text" id="_gotcha" name="_gotcha" class="form-control">
+      `;
+      contactForm.appendChild(honeypotField);
+      
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Validate form
+        if (!validateForm(contactForm)) {
+          return false;
+        }
+        
+        // Show loading state
+        const submitButton = contactForm.querySelector('.btn-submit');
+        const originalButtonText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+        
+        // Get form data
+        const formData = new FormData(contactForm);
+        
+        // Use Formspree to handle the form submission
+        // Replace 'YOUR_FORMSPREE_ENDPOINT' with your unique endpoint
+        fetch('https://formspree.io/f/mblgzzal', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(response => {
+          if (response.ok) {
+            return response.json();
+          }
+          throw new Error('Network response was not ok.');
+        })
+        .then(data => {
+          // Handle success
+          contactForm.reset();
+          
+          // Show success message
+          const successMessage = document.createElement('div');
+          successMessage.className = 'form-success-message';
+          successMessage.textContent = 'Thank you! Your message has been sent successfully.';
+          
+          // Insert the message after the form
+          contactForm.parentNode.insertBefore(successMessage, contactForm.nextSibling);
+          
+          // Reset button
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+          
+          // Remove the success message after 5 seconds
+          setTimeout(() => {
+            successMessage.remove();
+          }, 5000);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          
+          // Show error message
+          const errorMessage = document.createElement('div');
+          errorMessage.className = 'form-error-message';
+          errorMessage.textContent = 'Sorry, there was a problem sending your message. Please try again later.';
+          
+          // Insert the message after the form
+          contactForm.parentNode.insertBefore(errorMessage, contactForm.nextSibling);
+          
+          // Reset button
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+          
+          // Remove the error message after 5 seconds
+          setTimeout(() => {
+            errorMessage.remove();
+          }, 5000);
+        });
+      });
+    }
+    
+    // Handle Review Form
+    const reviewForm = document.getElementById('review-form');
+    
+    if (reviewForm) {
+      // Add honeypot field
+      const honeypotField = document.createElement('div');
+      honeypotField.className = 'form-group website-field';
+      honeypotField.innerHTML = `
+        <label for="_gotcha_review">Website</label>
+        <input type="text" id="_gotcha_review" name="_gotcha" class="form-control">
+      `;
+      reviewForm.appendChild(honeypotField);
+      
+      // Set up rating selection
+      const ratingOptions = reviewForm.querySelectorAll('.rating-option');
+      const ratingInput = reviewForm.querySelector('#rating');
+      
+      ratingOptions.forEach(option => {
+        option.addEventListener('click', function() {
+          const rating = this.getAttribute('data-rating');
+          ratingInput.value = rating;
+          
+          // Update visual state
+          ratingOptions.forEach(opt => opt.classList.remove('selected'));
+          
+          // Select this and all previous stars
+          for (let i = 0; i < rating; i++) {
+            ratingOptions[i].classList.add('selected');
+          }
+          
+          // Remove any validation errors
+          const errorMsg = reviewForm.querySelector('.rating-select + .validation-error');
+          if (errorMsg) errorMsg.remove();
+        });
+      });
+      
+      reviewForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Validate form
+        if (!validateForm(reviewForm)) {
+          return false;
+        }
+        
+        // Show loading state
+        const submitButton = reviewForm.querySelector('.btn-submit');
+        const originalButtonText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+        
+        // Get form data
+        const formData = new FormData(reviewForm);
+        
+        // Ensure the star rating is included
+        const rating = reviewForm.querySelector('#rating').value;
+        if (rating === "0") {
+          // If no rating is selected, show an error
+          const ratingContainer = reviewForm.querySelector('.rating-select');
+          addErrorMessage(ratingContainer, 'Please select a rating');
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+          return false;
+        }
+        
+        // Make sure we have the customer name
+        const name = reviewForm.querySelector('#name').value.trim();
+        if (!name) {
+          const nameInput = reviewForm.querySelector('#name');
+          addErrorMessage(nameInput, 'Please enter your name');
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+          return false;
+        }
+        
+        // Make sure we have the location
+        const location = reviewForm.querySelector('#location').value.trim();
+        if (!location) {
+          const locationInput = reviewForm.querySelector('#location');
+          addErrorMessage(locationInput, 'Please enter your location');
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+          return false;
+        }
+        
+        // Make sure we have the review text
+        const reviewText = reviewForm.querySelector('#review').value.trim();
+        if (!reviewText) {
+          const reviewInput = reviewForm.querySelector('#review');
+          addErrorMessage(reviewInput, 'Please enter your review');
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+          return false;
+        }
+        
+        // Add formatted data to make the email more readable
+        formData.append('formatted-message', 
+          `New Review Submission:\n\n` +
+          `Rating: ${rating} stars\n` +
+          `Name: ${name}\n` +
+          `Location: ${location}\n\n` +
+          `Review:\n${reviewText}`
+        );
+        
+        // Use Formspree to handle the form submission
+        // Replace 'YOUR_REVIEW_FORMSPREE_ENDPOINT' with your unique endpoint for reviews
+        fetch('https://formspree.io/f/mdkewwya', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(response => {
+          if (response.ok) {
+            return response.json();
+          }
+          throw new Error('Network response was not ok.');
+        })
+        .then(data => {
+          // Handle success
+          reviewForm.reset();
+          
+          // Reset rating stars
+          ratingOptions.forEach(opt => opt.classList.remove('selected'));
+          ratingInput.value = '0';
+          
+          // Show success message
+          const successMessage = document.createElement('div');
+          successMessage.className = 'form-success-message';
+          successMessage.textContent = 'Thank you for your review! It has been submitted successfully.';
+          
+          // Insert the message after the form
+          reviewForm.parentNode.insertBefore(successMessage, reviewForm.nextSibling);
+          
+          // Reset button
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+          
+          // Remove the success message after 5 seconds
+          setTimeout(() => {
+            successMessage.remove();
+          }, 5000);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          
+          // Show error message
+          const errorMessage = document.createElement('div');
+          errorMessage.className = 'form-error-message';
+          errorMessage.textContent = 'Sorry, there was a problem submitting your review. Please try again later.';
+          
+          // Insert the message after the form
+          reviewForm.parentNode.insertBefore(errorMessage, reviewForm.nextSibling);
+          
+          // Reset button
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+          
+          // Remove the error message after 5 seconds
+          setTimeout(() => {
+            errorMessage.remove();
+          }, 5000);
+        });
+      });
+    }
+  });
 
 // "Get a Quote" Button
 contactBtn.addEventListener('click', () => {

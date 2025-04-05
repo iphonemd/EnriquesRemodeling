@@ -348,11 +348,11 @@
                 <form id="review-form">
                     <div class="form-group">
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
                         <label for="location">Location</label>
-                        <input type="text" id="location" class="form-control" placeholder="City, State" required>
+                        <input type="text" id="location" name="location" class="form-control" placeholder="City, State" required>
                     </div>
                     <div class="form-group">
                         <label>Rating</label>
@@ -373,11 +373,15 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                             </div>
                         </div>
-                        <input type="hidden" id="rating" value="0" required>
+                        <input type="hidden" id="rating" name="rating" value="0" required>
                     </div>
                     <div class="form-group">
                         <label for="review">Your Review</label>
-                        <textarea id="review" class="form-control" rows="5" placeholder="Share your experience with our services..." required></textarea>
+                        <textarea id="review" name="review" class="form-control" rows="5" placeholder="Share your experience with our services..." required></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="privacy-consent" name="privacy-consent" class="privacy-checkbox" required>
+                        <label for="privacy-consent">I have read and agree to the <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.</label>
                     </div>
                     <button type="submit" class="btn-submit">Submit Review</button>
                 </form>
@@ -452,21 +456,21 @@
                 <form id="contact-form">
                     <div class="form-group">
                         <label for="contact-name">Full Name</label>
-                        <input type="text" id="contact-name" class="form-control" placeholder="Your Name" required>
+                        <input type="text" id="contact-name" name="name" class="form-control" placeholder="Your Name" required>
                     </div>
                     <div class="input-row">
                         <div class="form-group">
                             <label for="contact-email">Email</label>
-                            <input type="email" id="contact-email" class="form-control" placeholder="Your Email" required>
+                            <input type="email" id="contact-email" name="email" class="form-control" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
                             <label for="contact-phone">Phone</label>
-                            <input type="tel" id="contact-phone" class="form-control" placeholder="Your Phone" required>
+                            <input type="tel" id="contact-phone" name="phone" class="form-control" placeholder="Your Phone" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="contact-service">Service Interested In</label>
-                        <select id="contact-service" class="form-control" required>
+                        <select id="contact-service" name="service" class="form-control" required>
                             <option value="" disabled selected>Select a service</option>
                             <option value="bathroom">Bathroom Remodeling</option>
                             <option value="kitchen">Kitchen Remodeling</option>
@@ -479,7 +483,11 @@
                     </div>
                     <div class="form-group">
                         <label for="contact-message">Message</label>
-                        <textarea id="contact-message" class="form-control" rows="5" placeholder="Tell us about your project..." required></textarea>
+                        <textarea id="contact-message" name="message" class="form-control" rows="5" placeholder="Tell us about your project..." required></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="contact-privacy-consent" name="privacy-consent" class="privacy-checkbox" required>
+                        <label for="contact-privacy-consent">I have read and agree to the <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.</label>
                     </div>
                     <button type="submit" class="btn-submit">Send Message</button>
                 </form>
@@ -557,14 +565,15 @@
                 </div>
             </div>
             <hr class="footer-hr">
-            <div class="footer-bottom">
-                <p class="footer-copyright">© 2025 Enrique's Remodeling. All Rights Reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Sitemap</a>
+            <div class="modal" id="service-modal">
+                <div class="footer-bottom">
+                    <p class="footer-copyright">© 2025 Enrique's Remodeling. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Sitemap</a>
+                    </div>
                 </div>
-            </div>
         </div>
     </footer>
 
